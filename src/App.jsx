@@ -1,0 +1,36 @@
+import { useState } from "react";
+
+function App() {
+  const [color, setColor] = useState("olive");
+  let btns = ["green", "blue", "gray", "black", "teal", "yellow"];
+  let colors = [
+    "bg-green-700",
+    "bg-blue-700",
+    "bg-gray-700",
+    "bg-teal-600",
+    "bg-orange-700",
+    "bg-yellow-700",
+  ];
+
+  return (
+    <div className="flex flex-col h-screen">
+      <div className={`flex-grow ${color} p-4`}>
+      </div>
+      <div className="flex-shrink-0 flex justify-center items-end p-4">
+        <div className="flex space-x-4">
+          {btns.map((btn, index) => (
+            <button
+              key={btn}
+              onClick={() => setColor(colors[index])}
+              className={`py-2 px-4 font-bold border ${colors[index]} rounded-3xl shadow-lg`}
+            >
+              {btn}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
