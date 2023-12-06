@@ -1,16 +1,16 @@
 import { useState } from "react";
 
 function App() {
-  const [color, setColor] = useState("olive");
-  let btns = ["green", "blue", "gray", "black", "teal", "yellow"];
+  const [color, setColor] = useState(null);
+  let btns = ["Green", "Blue", "Gray", "Black", "Teal", "Yellow", "Reset"];
   let colors = [
     "bg-green-700",
-    "bg-blue-700",
+    "bg-blue-600",
     "bg-gray-700",
     "bg-teal-600",
     "bg-orange-700",
-    "bg-yellow-700",
-  ];
+    "bg-yellow-300"
+    ];
 
   return (
     <div className="flex flex-col h-screen">
